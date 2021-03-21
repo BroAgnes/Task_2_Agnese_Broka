@@ -177,12 +177,22 @@ ul {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: url(../img/navTop.svg);
-  background-size: cover;
+  background: white;
+  height: 90px;
   display: flex;
   padding-left: 65px;
   padding-right: 12px;
-  padding-bottom: 4%;
+}
+
+.container-navigation-section::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  min-height: 35px;
+  background: url(../img/navTop.svg) bottom center;
+  background-size: 150%;
 }
 
 .header-navbar {
