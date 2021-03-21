@@ -39,7 +39,8 @@ overlayControl.addEventListener("click", function () {
 
 document.addEventListener("scroll", function (e) {
   scrollPosition = window.scrollY;
-  if (scrollPosition > 0) {
+  if (!overlay.classList.contains("js-hidden")) {
+  } else if (scrollPosition > 0) {
     buttonUp.classList.remove("js-hidden");
   } else {
     buttonUp.classList.add("js-hidden");

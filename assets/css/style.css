@@ -27,22 +27,22 @@ ul {
 
 @font-face {
   font-family: "Montserrat500";
-  src: url(assets/font/Montserrat/Montserrat-Medium.ttf) format("truetype");
+  src: url(../font/Montserrat/Montserrat-Medium.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "Montserrat400";
-  src: url(assets/font/Montserrat/Montserrat-Regular.ttf) format("truetype");
+  src: url(../font/Montserrat/Montserrat-Regular.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "Montserrat600";
-  src: url(assets/font/Montserrat/Montserrat-SemiBold.ttf) format("truetype");
+  src: url(../font/Montserrat/Montserrat-SemiBold.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "Oswald";
-  src: url(assets/font/Oswald/static/Oswald-Medium.ttf) format("truetype");
+  src: url(../font/Oswald/static/Oswald-Medium.ttf) format("truetype");
 }
 
 .text-info {
@@ -177,7 +177,7 @@ ul {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: url(assets/img/navTop.svg);
+  background: url(../img/navTop.svg);
   background-size: cover;
   display: flex;
   padding-left: 65px;
@@ -365,9 +365,9 @@ ul {
 /* Sponsor section style */
 .container-sponsor-section {
   position: relative;
-  top: 68px;
+  top: 80px;
   z-index: -1;
-  background: url(assets/img/Subtract.svg);
+  background: url(../img/Subtract.svg);
   background-size: cover;
   padding: 100px 168px 235px;
 }
@@ -389,7 +389,7 @@ ul {
   padding-left: 64px;
   padding-right: 64px;
   padding-top: 72px;
-  background: url(assets/img/footer.svg);
+  background: url(../img/footer.svg);
   background-size: cover;
 }
 
