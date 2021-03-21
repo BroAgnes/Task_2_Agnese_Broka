@@ -27,22 +27,22 @@ ul {
 
 @font-face {
   font-family: "Montserrat500";
-  src: url(/assets/font/Montserrat/Montserrat-Medium.ttf) format("truetype");
+  src: url(./assets/font/Montserrat/Montserrat-Medium.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "Montserrat400";
-  src: url(/assets/font/Montserrat/Montserrat-Regular.ttf) format("truetype");
+  src: url(./assets/font/Montserrat/Montserrat-Regular.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "Montserrat600";
-  src: url(/assets/font/Montserrat/Montserrat-SemiBold.ttf) format("truetype");
+  src: url(./assets/font/Montserrat/Montserrat-SemiBold.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "Oswald";
-  src: url(/assets/font/Oswald/static/Oswald-Medium.ttf) format("truetype");
+  src: url(./assets/font/Oswald/static/Oswald-Medium.ttf) format("truetype");
 }
 
 .text-info {
@@ -177,11 +177,12 @@ ul {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: url(/assets/img/navTop.svg);
+  background: url(./assets/img/navTop.svg);
   background-size: cover;
   display: flex;
   padding-left: 65px;
   padding-right: 12px;
+  padding-bottom: 4%;
 }
 
 .header-navbar {
@@ -366,7 +367,7 @@ ul {
   position: relative;
   top: 68px;
   z-index: -1;
-  background: url(/assets/img/Subtract.svg);
+  background: url(./assets/img/Subtract.svg);
   background-size: cover;
   padding: 100px 168px 235px;
 }
@@ -388,7 +389,7 @@ ul {
   padding-left: 64px;
   padding-right: 64px;
   padding-top: 72px;
-  background: url(/assets/img/footer.svg);
+  background: url(./assets/img/footer.svg);
   background-size: cover;
 }
 
@@ -457,6 +458,10 @@ ul {
 
   .container-action-section {
     padding: 150px 80px 0;
+  }
+
+  .action {
+    margin-top: 80px;
   }
 
   .container-contact-form-section {
@@ -538,7 +543,7 @@ ul {
 /* js-class */
 
 .js-choosen {
-  font-family: "Montserrat600";
+  font-family: "Montserrat600", sans-serif;
   border-bottom-style: solid;
   border-color: rgba(255, 168, 0, 1);
   border-bottom-width: 5px;
