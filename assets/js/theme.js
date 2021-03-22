@@ -5,8 +5,13 @@ const openMenu = document.querySelector(".menu-btn");
 const overlay = document.querySelector(".overlay");
 const overlayControl = document.querySelector(".overlay-control");
 const buttonUp = document.querySelector(".button-up");
+const buttonUpStop = document.querySelector(".button-up-hidden");
+const mainContainer = document.querySelector(".container-main");
 
-let scrollPosition = window.scrollY;
+let overlayOffset = overlay.offsetHeight;
+let mainContainerOffsetTop = mainContainer.offsetTop;
+let scrollPosition = window.pageYOffset;
+let buttonUpStopPosition = buttonUpStop.offsetTop;
 let choosenLanguage = languages[0];
 choosenLanguage.classList.add("js-choosen");
 let choosenNav = nav[1];
@@ -38,11 +43,22 @@ overlayControl.addEventListener("click", function () {
 });
 
 document.addEventListener("scroll", function (e) {
-  scrollPosition = window.scrollY;
+  scrollPosition = window.pageYOffset;
+  overlayOffset = overlay.offsetHeight;
+  mainContainerOffsetTop = mainContainer.offsetTop;
+  buttonUpStopPosition = buttonUpStop.offsetTop;
+  const windowPos =
+    mainContainerOffsetTop +
+    buttonUpStop.offsetParent.offsetTop +
+    buttonUpStopPosition;
   if (!overlay.classList.contains("js-hidden")) {
+  } else if (scrollPosition + overlayOffset > windowPos) {
+    buttonUp.classList.add("js-button-up-stopped");
   } else if (scrollPosition > 0) {
+    buttonUp.classList.remove("js-button-up-stopped");
     buttonUp.classList.remove("js-hidden");
   } else {
+    buttonUp.classList.remove("js-button-up-stopped");
     buttonUp.classList.add("js-hidden");
   }
 });

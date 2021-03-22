@@ -91,7 +91,7 @@ ul {
   position: fixed;
   right: 20px;
   bottom: 20px;
-  z-index: 13;
+  z-index: 20;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,6 +100,23 @@ ul {
   width: 50px;
   height: 50px;
   cursor: pointer;
+}
+
+.button-up-hidden {
+  position: absolute;
+  right: 20px;
+  bottom: 80px;
+  visibility: hidden;
+  border-radius: 50%;
+  background-color: rgba(169, 169, 169, 0.5);
+  width: 50px;
+  height: 50px;
+}
+
+.js-button-up-stopped {
+  position: absolute;
+  right: 20px;
+  bottom: 80px;
 }
 
 .arrow {
@@ -265,7 +282,9 @@ ul {
 .galery-pictures {
   display: flex;
   justify-content: center;
+  align-content: center;
   padding: 1px 0;
+  overflow: hidden;
 }
 
 .grouped-pictures {
@@ -275,15 +294,31 @@ ul {
 .grouped-small-pictures {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .galery-picture {
   width: 100%;
   height: 100%;
-  max-width: 100%;
   max-height: 364px;
   object-fit: cover;
+}
+
+/* page button style */
+
+.page-button {
+  border-style: none;
+  background: rgba(255, 168, 0, 1);
+  cursor: pointer;
+  outline: 0;
+}
+
+.page-button:hover {
+  background: rgba(255, 203, 102, 1);
+}
+
+.page-button:active {
+  background: rgba(205, 124, 32, 1);
 }
 
 /* action section style */
@@ -299,9 +334,6 @@ ul {
   padding: 0 50px;
   height: 50px;
   border-radius: 30px;
-  border-style: none;
-  background: rgba(253, 165, 36, 1);
-  cursor: pointer;
 }
 
 /* contact form section style */
@@ -364,20 +396,17 @@ ul {
 }
 
 .contact-button {
-  background: rgba(253, 165, 36, 1);
-  border-style: none;
   border-radius: 30px;
   margin-top: 50px;
   padding: 0 62px;
   height: 62px;
-  cursor: pointer;
 }
 
 /* Sponsor section style */
 .container-sponsor-section {
   position: relative;
   top: 80px;
-  z-index: -1;
+  z-index: 7;
   background: url(../img/Subtract.svg);
   background-size: cover;
   padding: 100px 168px 235px;
@@ -397,6 +426,8 @@ ul {
 
 /* Footer style */
 .container-footer {
+  position: relative;
+  z-index: 8;
   padding-left: 64px;
   padding-right: 64px;
   padding-top: 72px;
@@ -471,6 +502,10 @@ ul {
     padding: 150px 80px 0;
   }
 
+  .galery-picture {
+    max-height: 300px;
+  }
+
   .action {
     margin-top: 80px;
   }
@@ -510,6 +545,11 @@ ul {
     padding: 150px 40px 0;
   }
 
+  .galery-picture {
+    max-height: 250px;
+    overflow: hidden;
+  }
+
   .action {
     margin-top: 80px;
   }
@@ -528,7 +568,7 @@ ul {
   }
 
   .sponsor-logo {
-    max-width: 200px;
+    max-width: 180px;
     max-height: 111px;
   }
 
