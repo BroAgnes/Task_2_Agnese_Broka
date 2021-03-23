@@ -41,6 +41,11 @@ ul {
 }
 
 @font-face {
+  font-family: "Montserrat700";
+  src: url(../font/Montserrat/Montserrat-Bold.ttf) format("truetype");
+}
+
+@font-face {
   font-family: "Oswald";
   src: url(../font/Oswald/static/Oswald-Medium.ttf) format("truetype");
 }
@@ -389,17 +394,49 @@ ul {
   text-align: left;
 }
 
-.form-checkbox {
-  margin-right: 21px;
-  background: #e7e7e7;
-  border-radius: 3px;
-}
-
 .contact-button {
   border-radius: 30px;
   margin-top: 50px;
   padding: 0 62px;
   height: 62px;
+}
+
+/* checkbox style */
+
+[type="checkbox"] {
+  position: absolute;
+  z-index: 3;
+  opacity: 0;
+  cursor: pointer;
+}
+
+[type="checkbox"] + label {
+  position: relative;
+  padding-left: 30px;
+  display: inline-block;
+}
+
+[type="checkbox"] + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  background: #e7e7e7;
+  border-radius: 3px;
+}
+
+[type="checkbox"]:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  background: url(../img/checkmark.jpg) no-repeat center;
+  background-size: 80%;
+  border-radius: 3px;
 }
 
 /* Sponsor section style */
@@ -454,12 +491,21 @@ ul {
   margin-bottom: 22px;
 }
 
+.heading-company-info-sm {
+  visibility: hidden;
+}
+
 .company-info-list .list-item {
   padding-bottom: 22px;
 }
 
 .contact-info {
   text-align: right;
+}
+
+.button-assets {
+  visibility: hidden;
+  font-family: "Montserrat700", sans-serif;
 }
 
 .social-media {
@@ -474,6 +520,7 @@ ul {
 .container-copyright {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-bottom: 13px;
 }
 
@@ -531,6 +578,16 @@ ul {
   .container-copyright-inner {
     flex-direction: row;
   }
+
+  .heading-company-info {
+    visibility: hidden;
+    margin: 0;
+  }
+
+  .heading-company-info-sm {
+    visibility: visible;
+    padding-top: 25px;
+  }
 }
 
 @media only screen and (max-width: 900px) {
@@ -568,8 +625,8 @@ ul {
   }
 
   .sponsor-logo {
-    max-width: 180px;
-    max-height: 111px;
+    max-width: 220px;
+    max-height: 150px;
   }
 
   .container-footer {
@@ -586,8 +643,18 @@ ul {
     text-align: left;
   }
 
+  .social-media-icon {
+    padding-left: 0;
+    padding-right: 29px;
+  }
+
+  .button-assets {
+    visibility: visible;
+  }
+
   .container-copyright {
     flex-direction: column;
+    align-items: initial;
   }
 }
 
