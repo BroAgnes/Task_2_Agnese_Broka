@@ -591,6 +591,13 @@ ul {
 }
 
 @media only screen and (max-width: 900px) {
+  .company-logo {
+    height: 50px;
+  }
+  .container-navigation-section {
+    height: 50px;
+    padding-left: 30px;
+  }
   .container-description-section {
     padding: 150px 20px;
   }
@@ -618,6 +625,16 @@ ul {
 
   .container-contact-form-section {
     padding: 120px 20px 55px;
+  }
+
+  .inputs {
+    grid-template-columns: auto;
+    grid-template-rows: 43px 43px 43px 232px;
+    grid-template-areas:
+      "name"
+      "email"
+      "tel"
+      "message";
   }
 
   .container-sponsor-section {
@@ -655,6 +672,19 @@ ul {
   .container-copyright {
     flex-direction: column;
     align-items: initial;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .video {
+    bottom: 15px;
+  }
+  .sponsor-logo {
+    max-width: 130px;
+    max-height: 80px;
+  }
+  .action-button {
+    width: 85vw;
   }
 }
 
