@@ -7,6 +7,9 @@ const overlayControl = document.querySelector(".overlay-control");
 const buttonUp = document.querySelector(".button-up");
 const buttonUpStop = document.querySelector(".button-up-hidden");
 const mainContainer = document.querySelector(".container-main");
+const videoContainer = document.querySelector(".video-container");
+const videoControls = document.querySelectorAll(".video-controls");
+const videoPlay = document.querySelector(".video-play");
 
 let overlayOffset = overlay.offsetHeight;
 let mainContainerOffsetTop = mainContainer.offsetTop;
@@ -60,5 +63,14 @@ document.addEventListener("scroll", function (e) {
   } else {
     buttonUp.classList.remove("js-button-up-stopped");
     buttonUp.classList.add("js-hidden");
+  }
+});
+
+videoContainer.addEventListener("click", function () {
+  videoControls.forEach((el) => el.classList.toggle("js-hidden"));
+  if (videoPlay.paused) {
+    videoPlay.play();
+  } else {
+    videoPlay.pause();
   }
 });
